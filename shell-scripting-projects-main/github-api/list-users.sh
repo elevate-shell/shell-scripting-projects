@@ -35,6 +35,19 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
+# Function to check if exactly 2 arguments are passed
+check_arguments() {
+    if [ "$#" -ne 2 ]; then
+        echo "Usage: $0 <arg1> <arg2>"
+        exit 1
+    fi
+}
+
+# Call the function with all script arguments
+check_arguments "$@"
+
+# Continue with the script
+echo "Arguments are valid. Continuing the script..."
 
 # Main script
 
